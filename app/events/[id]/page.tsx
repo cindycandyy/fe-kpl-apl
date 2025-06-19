@@ -1,5 +1,4 @@
-import { EventDetail } from "@/components/events/event-detail"
-import { AppLayout } from "@/components/layout/app-layout"
+import { EventDetail } from "@/src/presentation/components/events/EventDetail"
 
 interface EventDetailPageProps {
   params: {
@@ -9,8 +8,10 @@ interface EventDetailPageProps {
 
 export default function EventDetailPage({ params }: EventDetailPageProps) {
   return (
-    <AppLayout>
-      <EventDetail eventId={params.id} />
-    </AppLayout>
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto px-4 py-8">
+        <EventDetail eventId={params.id} />
+      </div>
+    </div>
   )
 }

@@ -1,10 +1,5 @@
-import { OrganizerDashboard } from "@/components/dashboard/organizer-dashboard"
-import { AppLayout } from "@/components/layout/app-layout"
+import { DashboardPage } from "@/src/presentation/pages/DashboardPage"
 
-export default function DashboardPage() {
-  return (
-    <AppLayout>
-      <OrganizerDashboard />
-    </AppLayout>
-  )
+export default function Dashboard() {
+  return <DashboardPage />
 }

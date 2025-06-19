@@ -2,13 +2,13 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { Providers } from "@/components/providers"
+import { AuthProvider } from "@/src/presentation/contexts/AuthContext"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "EventHub - Manajemen Event & Pemesanan Tiket",
-  description: "Platform untuk mengelola event dan memesan tiket secara online",
+  title: "EventHub - Platform Event & Tiket",
+  description: "Platform untuk menjelajahi event dan memesan tiket secara online",
     generator: 'v0.dev'
 }
 
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="id">
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   )
